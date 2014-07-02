@@ -46,6 +46,55 @@ you will need to update the project files accordingly.
 
 Compiling on GNU/Linux x86:
 ---------------------------
+sudo apt-get install scons
+
+apt-get install ia32-libs libc6-dev-i386 lib32gcc1 gcc-multilib  lib32stdc++6 g++-multilib lib32z1-dev
+
+apt-get install libopenal-dev
+apt-get install
+apt-get install libglu-dev
+
+
+apt-get install libX11-dev:i386 libXext-dev:i386 libxxf86vm-dev:i386
+
+ln -s /usr/lib32/libz.a /usr/lib/libz.a
+
+git clone https://github.com/TTimo/doom3.gpl.git
+
+cd doom3.gpl
+cd neo
+
+scons NOCURL=1
+
+
+build/debug/core/sys/scons/doom
+DOOM 1.3.1.1304-debug linux-x86 Nov 26 2011 20:21:11
+found interface lo - loopback
+found interface wlan0 - 192.168.1.103/255.255.255.0
+found interface virbr0 - 192.168.122.1/255.255.255.0
+no 'base' directory in exe path /home/mariuz/work/doom3.gpl/neo/build/debug/core/sys/scons, skipping
+no 'base' directory in cwd path /home/mariuz/work/doom3.gpl/neo, skipping
+WARNING: using hardcoded default base path
+------ Initializing File System ------
+Current search path:
+/home/mariuz/.doom3/base
+/usr/local/games/doom3/base
+game DLL: 0x0 in pak: 0x0
+Addon pk4s:
+file system initialized.
+--------------------------------------
+Unknown command 'vid_restart'
+idRenderSystem::Shutdown()
+Sys_Error: Couldn't load default.cfg
+
+Update : The m32 curl fix is already applied
+
+
+
+for running the game download doom3 main version/
+
+
+
 
 The build system on GNU/Linux is based on SCons: http://www.scons.org/
 Issue the scons command in the neo/ folder.
